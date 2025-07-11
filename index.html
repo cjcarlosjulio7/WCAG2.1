@@ -97,7 +97,7 @@
             font-size: 1.2em;
             max-width: 800px;
             margin: 0 auto 30px;
-            /* Corrección Error: Se cambió el color a uno con mayor contraste*/
+            /* Corrección Error 2: Se cambió el color a uno con mayor contraste*/
             color: #004085;
         }
 
@@ -159,7 +159,7 @@
         }
 
         .form-group button {
-            background-color: #28a745;
+            background-color: #1d7531;
             color: #fff;
             padding: 10px 20px;
             border: none;
@@ -217,13 +217,12 @@
         .large-low-contrast-text {
             font-size: 24px;
             font-weight: bold;
-            color: #BBBBBB;
+            /* Corrección Error: Se cambió el color a uno con mayor contraste*/
+            color: #333333;
             background-color: #FFFFFF;
         }
 
-        .no-focus-outline:focus {
-            outline: none;
-        }
+        
 
         .div-button {
             padding: 10px;
@@ -268,7 +267,7 @@
 
     <div class="hero-section">
         <p>Tu camino hacia la independencia vial comienza aquí.</p>
-        <a href="#matricula" class="form-group button">Inscríbete Ahora</a>
+        <button class="form-group button" aria-label="Inscríbete Ahora"> Inscríbete Ahora</button>
     </div>
 
     <div class="main-content">
@@ -327,8 +326,7 @@
                 <input type="tel" id="tel" name="telefono">
                 </div>
             <div class="form-group">
-                <button aria-label="">Enviar Solicitud</button>
-                <button></button>
+                <button aria-label="Enviar Solicitud">Enviar Solicitud</button>
                 </div>
 
             <div style="margin-top: 30px;">
@@ -339,7 +337,7 @@
             </div>
 
             <!-- ERROR 9 - Elemento interactivo no semántico Se  reemplazó div por button para accesibilidad-->
-            <button class="no-focus-outline" style="margin-top: 20px;">
+            <button class="form-group button" style="margin-top: 20px;" aria-label="Contactar un Asesor">
                 <span class="low-contrast-icon">!</span> Contacta un Asesor
             </button>
             
