@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Corrección Error: se añadio de metadatos descriptivos -->
+    <meta name="description" content="Academia Vial Élite - Información sobre cursos de conducción y matrículas">
     <title>Academia Vial Élite - Cursos de Conducción</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -95,6 +97,8 @@
             font-size: 1.2em;
             max-width: 800px;
             margin: 0 auto 30px;
+            /* Corrección Error: Se cambió el color a uno con mayor contraste*/
+            color: #004085;
         }
 
         .main-content {
@@ -204,8 +208,9 @@
         }
 
         /* ERRORES ESPECÍFICOS */
+        /* Corrección Error: Se cambió el color a uno con mayor contraste*/
         .low-contrast-text {
-            color: #AAAAAA;
+            color: #333333;
             background-color: #FFFFFF;
         }
 
@@ -255,7 +260,7 @@
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#cursos">Cursos</a></li>
             <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#"></a></li>
+            <!-- Corrección Error: Se boroo un enlace vacío -->
             <li><a href="">Preguntas Frecuentes</a></li>
             <li><a href="#inscripcion">Más información</a></li>
             </ul>
@@ -275,10 +280,12 @@
                     <h5>Dirigido a principiantes sin experiencia previa.</h5>
                     <p class="low-contrast-text">Aprende los fundamentos de la conducción en un ambiente seguro y
                         controlado. Incluye clases teóricas y prácticas intensivas.
-                        <img src="https://via.placeholder.com/150" style="float:right; margin-left:15px;">
+                        <!-- Corrección Error: Se añadió alt imagen de Fundamentos -->
+                        <img src="https://via.placeholder.com/150" alt="Fundamentos de la conducción" style="float:right; margin-left:15px;">
                         </p>
                     <p>
-                        <img src="https://via.placeholder.com/100x50" alt="" style="float:left; margin-right:15px;">
+                        <!-- Corrección Error: Se añadió alt imagen de simulador -->
+                        <img src="https://via.placeholder.com/100x50" alt="Simulador de conducción usado en el curso inicial" style="float:left; margin-right:15px;">
                         Utilizamos simuladores de última generación para tus primeras experiencias al volante.
                     </p>
                 </div>
@@ -301,15 +308,19 @@
         </section>
 
         <section id="matricula" class="form-section">
-            <h1 class="section-title">Proceso de Matrícula</h1>
+            <!-- ERROR 3 - Encabezado mal estructurado se cambia a h2-->
+            <h2 class="section-title">Proceso de Matrícula</h2>
             <p class="large-low-contrast-text">Completa el formulario y da el primer paso hacia tu licencia de
                 conducir.</p>
-
             <div class="form-group">
-                <input type="text" placeholder="Tu Nombre Completo">
+                <!-- Corrección error 4 - Falta de etiquetas asociadas a inputs -->
+                <label for="nombre">Tu Nombre Completo:</label>
+                <input type="text" id="nombre">
                 </div>
             <div class="form-group">
-                <input type="email" placeholder="Tu Correo Electrónico">
+                <!-- Corrección error 4 - Falta de etiquetas asociadas a inputs -->
+                <label for="correo">Tu Correo Electrónico:</label>
+                <input id="correo" type="email">
             </div>
             <div class="form-group">
                 <label for="telefono">Número de Teléfono:</label>
@@ -327,12 +338,11 @@
                 <a href="#" tabindex="3">Paso 3: Confirmación</a>
             </div>
 
-            <div class="div-button no-focus-outline" tabindex="0" style="margin-top: 20px;">
+            <!-- ERROR 9 - Elemento interactivo no semántico Se  reemplazó div por button para accesibilidad-->
+            <button class="no-focus-outline" style="margin-top: 20px;">
                 <span class="low-contrast-icon">!</span> Contacta un Asesor
-            </div>
-            <button tabindex="-1">Botón de Demo Inactivo</button>
-            </section>
-
+            </button>
+            
         <section id="horarios" class="section-container">
             <h2 class="section-title">Calendario de Cursos</h2>
             <p>Consulta nuestras próximas fechas disponibles para iniciar tu formación.</p>
@@ -342,10 +352,11 @@
                 <table>
                     <thead>
                         <tr>
-                            <td>Modalidad</td>
-                            <td>Inicio</td>
-                            <td>Horario</td>
-                            <td>Vacantes</td>
+                        <!-- Corrección error 8 - Cabecera de tabla mal definida -->
+                            <th>Modalidad</th>
+                            <th>Inicio</th>
+                            <th>Horario</th>
+                            <th>Vacantes</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -389,8 +400,8 @@
                     </tbody>
                 </table>
             </div>
-
-            <div role="alrt" aria-labelledby="system-status-msg" style="margin-top: 30px; border: 1px solid #ffcc00; padding: 10px; background-color: #fffacd;"></div>
+            <!-- Corrección Error 6 Valor incorrecto en atributo role, Se corrigió el valor 'alrt' a 'alert' -->
+            <div role="alert" aria-labelledby="system-status-msg" style="margin-top: 30px; border: 1px solid #ffcc00; padding: 10px; background-color: #fffacd;"></div>
             <p id="system-status-msg">Estado del sistema: Verificando disponibilidad de instructores.</p>
 
             <div style="margin-top: 20px;">
